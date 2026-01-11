@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Voice Typing Anywhere",
+  "version": "1.0",
+  "description": "Voice typing with on-demand mic button",
+
+  "action": {
+    "default_title": "Toggle Voice Typing"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "permissions": ["activeTab"],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
